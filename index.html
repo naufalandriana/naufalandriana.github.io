@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head >
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Port</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Yeseva+One&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="body">
+    <div class="container">
+        <div id="text1">
+            <span class="red-text">Uppsss...</span>Website is Under Construction! 
+        </div>
+        <p id="title" style="font-size: 25px;">Tetap bersama kami!</p>
+        <div>
+            <p class="content">
+            Saat ini, website sedang dalam perbaikan untuk meningkatkan keindahan wesite. 
+            While nugguin, follow this profile for a kane taste in music.
+            thank you for your patience🙏🏼
+            </p>
+        </div>
+    </div>
+    <button class="clik"><a href="https://open.spotify.com/user/31dm72fm5d2r2y3cjuzdf2wlpqdq?si=0c802caddae64b66">clik me</a></button>
+    <p style="font-family: Poppins; font-size: 20px; text-align: center;">we'll finished by</p>
+<div id="countdown"></div>
+<script>
+    // Cek apakah tanggal akhir sudah disimpan di local storage
+    var endDate = localStorage.getItem('countdownEndDate');
+
+    // Jika tidak ada, set tanggal akhir 1 Januari 2024 dan simpan di local storage
+    if (!endDate) {
+        endDate = new Date('2024-01-01T00:00:00Z').getTime();
+        localStorage.setItem('countdownEndDate', endDate);
+    } else {
+        // Jika sudah ada, parse tanggal akhir dari string ke timestamp
+        endDate = parseInt(endDate, 10);
+    }
+
+    // Perbarui hitungan mundur setiap 1 detik
+    var countdown = setInterval(function() {
+        // Waktu saat ini
+        var now = new Date().getTime();
+
+        // Hitung selisih waktu antara sekarang dan tanggal akhir
+        var timeLeft = endDate - now;
+
+        // Hitung hari, jam, menit, dan detik
+        var days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+        // Tampilkan hasil
+        var countdownElement = document.getElementById('countdown');
+        countdownElement.innerHTML = days + ' Day ' + hours + ' Hours ' + minutes + ' Minute ' + seconds + ' Second ';
+
+        // Hentikan hitungan mundur jika waktu sudah habis
+        if (timeLeft < 0) {
+            clearInterval(countdown);
+            countdownElement.innerHTML = 'Waktu telah habis!';
+        }
+    }, 1000);
+</script>
+
+</body>
+</html>

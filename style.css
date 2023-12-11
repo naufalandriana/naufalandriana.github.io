@@ -1,0 +1,74 @@
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Yeseva+One&display=swap');
+body {
+    background-color: white;
+    padding: 10%;
+    
+}
+#countdown {
+    font-size: 30px;
+    font-weight: lighter;
+    text-align: center;
+    color:black;
+    font-family: 'Courier New', Courier, monospace; 
+}
+#text1{
+    font-size: 30px;
+    font-family: Poppins;
+    font-weight: bold;
+}
+.red-text {
+    color: red;
+    font-family: Poppins;
+    font-weight: bold;
+    text-align: justify;
+    justify-content: center;
+}
+
+#title {
+    font-family: Poppins;
+    font-weight: lighter;
+}
+#paragraf {
+    font-family: Poppins;
+    justify-content: center;
+    text-align: left; 
+    color: bisque;  
+}
+.content {
+    font-size: 25px;
+    font-family: Poppins;
+    justify-content: center;
+    text-align: justify;
+}
+
+.clik{
+    padding: 7px;
+    margin: 0px;
+    border-radius: 7px;
+    width: 80px;
+    height: 40px;
+    font-size: 15px;
+    color: #1ED760;
+    text-decoration: none;
+    font-family: Poppins;
+    background-color: #252424;
+    transition: 1s;
+    border: 1px white;
+    
+}
+
+.clik:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+    background-color: #1ED760;
+    color: #252424;
+    
+}
+
+a {
+    text-decoration: none;
+    color:#1ED760;
+}
+a:hover  {
+    color: #252424;
+}
